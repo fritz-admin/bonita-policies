@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Bonita Translator</title>
+<style>
+  :root { --bg: #fff; --fg: #1a1a1a; --muted: #555; --border: #ddd; --accent: #2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1a1a1a; --fg: #e5e5e5; --muted: #999; --border: #333; --accent: #60a5fa; }
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         background: var(--bg); color: var(--fg); line-height: 1.6; padding: 24px 16px; }
+  .container { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+  h2 { font-size: 1.15rem; margin: 28px 0 8px; }
+  p, li { margin-bottom: 8px; }
+  ul { padding-left: 20px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 8px; border: 1px solid var(--border); }
+  th { background: color-mix(in srgb, var(--fg) 6%, var(--bg)); font-weight: 600; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); }
+  .footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border);
+            color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">Bonita Translator &middot; Retail Software Systems LLC &middot; Effective September 26, 2026</p>
+
+<p>Bonita Translator is a real-time English/Spanish translation app designed for retail counter use. It is built so that <strong>nothing you say leaves your phone</strong>.</p>
+
+<h2>Data we collect</h2>
+<p><strong>None.</strong> The app has no server, no analytics, no advertising SDK, and no sign-in. We do not collect, store, or transmit any personal data.</p>
+
+<h2>Microphone &amp; speech</h2>
+<ul>
+  <li><strong>No recordings.</strong> Microphone audio is streamed to the on-device speech recognizer and immediately discarded. The app never writes audio to disk.</li>
+  <li><strong>No uploads of speech or text.</strong> There is no code path that transmits conversation audio or translated text off the device.</li>
+</ul>
+
+<h2>Translation</h2>
+<p>Translation uses Google ML Kit, which runs <strong>entirely on-device</strong> after a one-time language-model download. The download itself contacts Google servers but carries no conversation data. Once downloaded, translation works offline.</p>
+
+<h2>Conversation history</h2>
+<ul>
+  <li>The transcript exists only in app memory during a session.</li>
+  <li>An optional "keep conversation after closing" setting (off by default) stores it in on-device app storage only, capped at 200 exchanges.</li>
+  <li>You can delete all saved history with one tap.</li>
+  <li>There is no remote conversation history of any kind.</li>
+</ul>
+
+<h2>Over-the-air updates</h2>
+<p>The app uses Capgo to check for web-bundle updates at launch. Capgo receives the app identifier, bundle version, and basic device info (platform, OS version). It never sees microphone audio, transcripts, or translations — it only delivers UI code updates published from our repository.</p>
+
+<h2>Platform speech services</h2>
+<p>The app requests on-device speech recognition whenever the device supports it. On some older devices or unsupported language/hardware combinations, the operating system's own speech service may process audio on its servers:</p>
+
+<table>
+  <tr><th>Stage</th><th>Android</th></tr>
+  <tr>
+    <td>Speech recognition</td>
+    <td>On-device on Android 12+ with Google speech services. On older devices, or if an offline model is missing, the system recognizer may send audio to Google's speech service.</td>
+  </tr>
+  <tr>
+    <td>Translation</td>
+    <td>Google ML Kit — 100% on-device after model download.</td>
+  </tr>
+  <tr>
+    <td>Text-to-speech</td>
+    <td>Device TTS voices (offline once installed).</td>
+  </tr>
+</table>
+
+<p>This app adds <strong>no cloud service of its own</strong>. The only possible network party is the operating system's built-in speech service on older or unsupported hardware.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Microphone</strong> — the only sensitive permission, used for live speech recognition.</li>
+  <li><strong>Internet</strong> — used for the one-time ML Kit model download and Capgo update checks only.</li>
+  <li>No Bluetooth, location, camera, or contacts permissions are requested.</li>
+</ul>
+
+<h2>Children's privacy</h2>
+<p>The app is not directed at children under 13. We do not knowingly collect information from children.</p>
+
+<h2>Changes to this policy</h2>
+<p>If we update this policy, the revised version will be posted at this URL with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be sent to <a href="mailto:fritz@bonitabikes.com">fritz@bonitabikes.com</a>.</p>
+
+<div class="footer">
+  <p>&copy; 2026 Retail Software Systems LLC. All rights reserved.</p>
+</div>
+
+</div>
+</body>
+</html>
